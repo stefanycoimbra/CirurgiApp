@@ -1,0 +1,194 @@
+<%- include('header') -%>
+
+<div class="container">
+  <form class="contact" action="" method="post">
+    <div class="form-group">
+      <h3>Formulário do Paciente - Identificação</h3> <br>
+
+      <div class="col50 colleft">
+        <div class="col50 colleft">
+          <div class="wd50">
+            <label name=""> Paciente</label>
+            <input placeholder="Primeiro Nome" name="firstName" type="text" autofocus>
+          </div>
+          <div class="wd50">
+            <input placeholder="Sobrenome" name="lastName" type="text">
+          </div>
+          <div class="wd50">
+            <br>
+            <label name="">Telefone de Contato</label>
+            <input placeholder="Telefone" name="tel" type="tel">
+          </div>
+        </div>
+        <div class="col50 colright">
+          <div class="wd50">
+            <label name="">Data de Nascimento</label>
+            <input placeholder="" name="dateBirth" type="date">
+          </div>
+          <div class="wd50">
+            <label name="">Nome da Mãe</label>
+            <input placeholder="Nome Completo" name="momName" type="text">
+          </div>
+          <div class="wd50">
+            <label name="">Nome do Pai</label>
+            <input placeholder="Nome Completo" name="dadName" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="col50 colright">
+        <div class="col50 colleft">
+          <div class="wd50">
+            <label name="">Endereço</label>
+            <input placeholder="Endereço" name="address" type="text">
+          </div>
+          <div class="wd50">
+            <label name="">Cidade</label>
+            <input placeholder="Cidade" name="city" type="city">
+          </div>
+          <div class="wd50">
+            <label name="genre">Sexo</label>
+            <select>
+              <option value=" ">Escolher</option>
+              <option value=" ">Feminino
+              <option value=" ">Masculino</option>
+            </select>
+          </div>
+        </div>
+        <div class="col50 colright">
+          <div class="wd50">
+            <label name="">Estado Civil</label>
+            <input placeholder="Estado Civil" name="civilState" type="text">
+          </div>
+          <div class="wd50">
+            <label name="">Se casado(a), parceiro(a) </label>
+            <input placeholder="Nome Completo" name="beloved" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="wd100">
+        <hr>
+      </div>
+      <h3>Formulário do Paciente - Internação</h3>
+      <div class="wd100">
+        <label name="">Diagnóstico Provisório</label>
+        <textarea placeholder="Insira o diagnóstico aqui..." name="diagnose"></textarea>
+      </div>
+      <div class="wd50">
+        <label name="">Código CID, se necessário</label>
+        <input placeholder="CID" name="cid" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Data da Internação</label>
+        <input placeholder="" name="intDate" type="date">
+      </div>
+      <div class="wd50"></div>
+      <div>
+        <br>
+        <form class="col-xs-12" action="upload.php" method="post" enctype="multipart/form-data">
+          Assinatura Digital ou Foto de Identificação
+          <input type="file" name="fileToUpload" id="fileToUpload">
+      </div>
+      <div class="wd50"></div>
+      <div class="wd50">
+        <br>
+        <label name="">CRM</label>
+        <input placeholder="" name="crm" type="text">
+      </div>
+      <div class="wd100">
+        <hr>
+      </div>
+      <br>
+      <h3>Formulário do Paciente - Dados Físicos</h3>
+      <div class="wd50">
+        <label name="">Frequência Respiratória</label>
+        <input placeholder="" name="phyData" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Frequência Cardíaca</label>
+        <input placeholder="" name="cardName" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Oxigenação</label>
+        <input placeholder="" name="oxiName" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Temperatura</label>
+        <input placeholder="" name="tempName" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Coagulação Sanguínea</label>
+        <input placeholder="" name="coagName" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Pressão</label>
+        <input placeholder="" name="pressName" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Peso</label>
+        <input placeholder="Peso" name="weight" type="text">
+      </div>
+      <div class="wd50">
+        <label name="">Altura</label>
+        <input placeholder="Altura, em cm" name="height" type="text">
+      </div>
+      <div class="wd100">
+        <hr>
+      </div>
+      <h3>Formulário do Paciente - Relatório</h3>
+      <div class="wd100">
+        <label name="">Estado Geral</label>
+        <textarea placeholder="Insira estado geral do paciente com respectivas datas..." name="generalState"></textarea>
+      </div>
+      <div class="wd100">
+        <label name="">Conduta e Procedimentos</label>
+        <textarea placeholder="Insira conduta e procedimentos realizados com respectivas datas..." name="procedures"></textarea>
+      </div>
+      <div class="wd100">
+        <label name="">Diagnóstico Principal</label>
+        <textarea placeholder="Insira diagnóstico principal do paciente..." name="princDiagnose"></textarea>
+      </div>
+      <div class="wd100">
+        <hr>
+      </div>
+      <h3>Formulário do Paciente - Exames</h3>
+      <div class="wd100">
+        <label name="">Listagem dos Exames Solicitados</label>
+        <textarea placeholder="Insira solicitação de exames..." name="exams"></textarea>
+      </div>
+      <div>
+        <br>
+        <form class="col-xs-12" action="/upload-profile-pic" method="post" enctype="multipart/form-data">
+          Anexo dos Exames
+          <input type="file" name="profile_pic">
+      </div>
+      <div class="wd100"></div>
+      <div class="wd100">
+        <br>
+        <label name="statePatient">Paciente em que estado?</label>
+        <select>
+          <option value=" ">Estado leve</option>
+          <option value=" ">Estado grave</option>
+          <option value=" ">Em observação</option>
+        </select>
+      </div>
+      <div class="wd100">
+        <label name="leavePatient">Paciente em alta?</label>
+        <select>
+          <option value=" ">Não</option>
+          <option value=" ">Sim</option>
+        </select>
+      </div>
+
+      <div class="wd100">
+        <label name="obsExtra">Observações Adicionais</label>
+        <textarea placeholder="Insira observações adicionais relevantes sobre o paciente..."></textarea>
+      </div>
+    </div>
+    <div class="wd100">
+      <button type="submit" name="xPatient" name="savePatient" class="btn btn-primary">Salvar</button>
+    </div>
+  </form>
+</div>
+<%- include('footer') -%>
